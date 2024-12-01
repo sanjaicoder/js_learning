@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse a string</title>
+  </head>
+  <body>
+    <script>
+      let name = "sanjai";
+      let arrayOfLetters = [];
+      for (i = 0; i < name.length; i++) {
+        let slicedName = name.slice(i, i + 1);
+        arrayOfLetters.push(slicedName);
+        console.log(arrayOfLetters);
+      }
+      let reverseArray = arrayOfLetters.reverse();
+      console.log(reverseArray);
+      //reverse a string
+      let reverseStr = "";
+      for (i = 0; i < reverseArray.length; i++) {
+        reverseStr += reverseArray[i];
+      }
+      console.log(reverseStr);
+    </script>
+  </body>
+</html>
