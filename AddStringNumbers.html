@@ -6,21 +6,29 @@
     <title>Document</title>
   </head>
   <body>
+    <label for="input">Enter numbers for addition:</label>
+    <input type="text" name="input" id="input" />
+    <button onclick="addNumbers()">Add</button>
+    <p id="addedNum"></p>
     <script>
-      let strNum = "1234";
-      let arrayOfNum = [];
-      //slice numbers for storing in array
-      for (let i = 0; i < strNum.length; i++) {
-        let slicedNum = Number(strNum.slice(i, i + 1));
-        arrayOfNum.push(slicedNum);
+      function addNumbers() {
+        let input = document.getElementById("input");
+        let strNum = input.value;
+        console.log(strNum);
+        let arrayOfNum = [];
+        //slice numbers for storing in array
+        for (let i = 0; i < strNum.length; i++) {
+          let slicedNum = Number(strNum.slice(i, i + 1));
+          arrayOfNum.push(slicedNum);
+        }
+        //adding all numbers
+        let num = 0;
+        for (let i = 0; i < arrayOfNum.length; i++) {
+          num += arrayOfNum[i];
+        }
+        document.getElementById("addedNum").innerHTML = num;
+        console.log(num);
       }
-      //adding all numbers
-      let num = 0;
-      for (let i = 0; i < arrayOfNum.length; i++) {
-        num += arrayOfNum[i];
-      }
-      document.write(num);
-      console.log(num);
     </script>
   </body>
 </html>
